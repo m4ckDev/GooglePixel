@@ -247,16 +247,16 @@ tcpdump -i wlan2
 
 ### 9. Wireless ADB IP can change after reboot
 
-Before reboot the phone was reachable at:
+Before reboot the phone was reachable at a DHCP-assigned private address:
 
 ~~~text
-192.168.0.251:5555
+<PHONE_IP_BEFORE_REBOOT>:5555
 ~~~
 
-After reboot, DHCP assigned:
+After reboot, DHCP assigned a different private address:
 
 ~~~text
-192.168.0.112
+<PHONE_IP_AFTER_REBOOT>
 ~~~
 
 When wireless ADB stops working, reconnect the phone by USB and obtain the current WLAN address instead of assuming the old IP:
@@ -460,7 +460,7 @@ Creating vendor_dlkm image
 Trimming unused modules
 Target //private/devices/google/bluejay:bluejay/dist up-to-date
 Build completed successfully
-Copying to /home/m4ck/bluejay-kernel-src/out/bluejay/dist
+Copying to ~/bluejay-kernel-src/out/bluejay/dist
 ~~~
 
 Generated files included:
